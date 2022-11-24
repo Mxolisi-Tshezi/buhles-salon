@@ -1,5 +1,7 @@
 # Buhles salon
 
+[![NodeJS CI with PostgreSQL](https://github.com/Mxolisi-Tshezi/buhles-salon/actions/workflows/node.js.yml/badge.svg)](https://github.com/Mxolisi-Tshezi/buhles-salon/actions/workflows/node.js.yml)
+
 Buhle has started a salon in her local shopping centre and needs a system to keep track of her business. The salon currently offers 4 different treatments `Pedicures`, `Manicures`, `Make up` & `Brows & Lashes`.
 
 All stylists can do all treatments.

@@ -1,36 +1,31 @@
--- Table create scripts here
-
+Table create scripts here
 create table client(
-	id serial not null primary key,
+    id serial primary key not null,
     first_name text not null,
     last_name text not null,
-    phone_number varchar
+    phone_number text not null
 );
-
 create table treatment(
-	id serial not null primary key,
-    types text not null,
-    code varchar
+    id serial primary key not null,
+    type text not null,
+    code text not null,
+    price decimal not null
 );
-
-
 create table stylist(
-	id serial not null primary key,
+    id serial primary key not null,
     first_name text not null,
     last_name text not null,
-    phone_number varchar,
-    commission_percentage integer
+    phone_number text not null,
+    commission_percentage numeric(3,2) not null
 );
-
 create table booking(
-    id serial not null primary key,
-    booking_date date,
-    booking_time time,
-    client_id integer,
-    FOREIGN KEY (client_id) references client(id),
-    treatment_id integer,
-    FOREIGN KEY (treatment_id) references treatment(id),
-    stylist_id integer,
-    FOREIGN KEY (stylist_id) references stylist(id)
-
-);
+    id serial primary key not null,
+    booking_date date not null,
+    booking_time time not null,
+    client_id int not null,
+    foreign key (client_id) references client(id) on delete cascade,
+    treatment_id int not null,
+    foreign key (treatment_id) references treatment(id) on delete cascade,
+    stylist_id int not null,
+    foreign key (stylist_id) references stylist(id) on delete cascade
+)

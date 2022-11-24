@@ -1,4 +1,4 @@
--- Table create scripts here
+Table create scripts here
 create table client(
     id serial primary key not null,
     first_name text not null,
@@ -23,10 +23,10 @@ create table booking(
     booking_date date not null,
     booking_time time not null,
     client_id int not null,
-    treatment_id int not null,
-    stylist_id int not null,
     foreign key (client_id) references client(id) on delete cascade,
+    treatment_id int not null,
     foreign key (treatment_id) references treatment(id) on delete cascade,
+    stylist_id int not null,
     foreign key (stylist_id) references stylist(id) on delete cascade
 )
 

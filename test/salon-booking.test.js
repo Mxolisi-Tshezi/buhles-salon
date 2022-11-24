@@ -3,7 +3,7 @@ import SalonBooking from '../salon-booking.js';
 import pgPromise from 'pg-promise';
 
 // TODO configure this to work.
-const DATABASE_URL = process.env.DATABASE_URL || "postgresql://localhost:5432/salon_test";
+const DATABASE_URL = process.env.DATABASE_URL || "postgresql://salon:salon123@localhost:5432/salon_test";
 
 const config = { 
 	connectionString : DATABASE_URL

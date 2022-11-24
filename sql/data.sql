@@ -31,3 +31,12 @@ insert into stylist(first_name,last_name,phone_number,commission_percentage)
 values('Janusa','Walusa','0712345678',0.17);
 insert into stylist(first_name,last_name,phone_number,commission_percentage) 
 values('Satafrika','Drama','0216728901',0.20);
+
+insert into booking(client_id, treatment_id, stylist_id, booking_date, booking_time)
+values ('1', '2', '2','24 November 2022', '10:30');
+insert into booking(client_id, treatment_id, stylist_id, booking_date, booking_time) 
+values ('2', '2', '3','24 November 2022', '11:30');
+insert into booking(client_id, treatment_id, stylist_id, booking_date, booking_time)
+values ('2', '2', '3','24 November 2022', '14:30');
+insert into booking(client_id, treatment_id, stylist_id, booking_date, booking_time)
+values ('2', '2', '3','24 November 2022', '15:30');
